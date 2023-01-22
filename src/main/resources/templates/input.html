@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" th:src="@{/js/style.js}"></script>
+    <title>input</title>
+</head>
+
+<body>
+    <header>
+        <a th:href="@{/}">ヘッダー</a>
+    </header>
+    <div class="error">
+        <p class="error-message">エラーメッセージ</p>
+    </div>
+    <div class="form">
+        <form>
+            <div class="form-nameKana">
+                <div class="form-name">
+                    <h2 class="column-title">名前</h2>
+                    <p>名前を入力してください</p>   
+                    <input type="text">
+                </div>
+                <div class="form-kana">
+                    <h2 class="column-title">名前カナ</h2>
+                    <p>カナを入力してください</p>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="form-phonePost">
+                <div class="form-pn">
+                    <h2 class="column-title">電話番号</h2>
+                    <p>電話番号を入力してください</p>
+                    <input type="text">
+                </div>
+                <div class="form-postcode">
+                    <h2 class="column-title">郵便番号</h2>
+                    <p>郵便番号を入力してください</p>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="form-search">
+                <button type="button" id="searchBtn" onclick="clickSearchBtn()">検索</button>
+            </div>
+        </form>
+    </div>
+    <table class="srResult-table" id="table1">
+        <tr>
+            <th><img onclick="allChange()" class="allChkBox" id="allChkBox" src="images/square-1.jpg"></th>
+            <th class="table-name">お客様名</th>
+            <th class="table-bd">生年月日</th>
+            <th class="table-add">住所</th>
+            <th>案内フラグ</th>
+        </tr>
+        <tr>
+            <td><img onclick="change1()" class="chkBoxImage" id="chkBox1" src="images/chkBox_off.jpg"></td>
+            <td>山田太郎 (ヤマダタロウ)</td>
+            <td>0000/00/00</td>
+            <td>XX県XX市XX町0-00-00</td>
+            <td th:align=center>未</td>
+        </tr>
+        <tr>
+            <td><img onclick="change2()" class="chkBoxImage" id="chkBox2" src="images/chkBox_off.jpg"></td>
+            <td>佐藤次郎 (サトウジロウ)</td>
+            <td>0000/00/01</td>
+            <td>XX県XX市XX町0-00-01</td>
+            <td th:align=center>済</td>
+        </tr>
+        <tr>
+            <td><img onclick="change3()" class="chkBoxImage" id="chkBox3" src="images/chkBox_off.jpg"></td>
+            <td>田中三郎 (タナカサブロウ)</td>
+            <td>0000/00/02</td>
+            <td>XX県XX市XX町0-00-02</td>
+            <td th:align=center>エラー</td>
+        </tr>
+    </table>
+
+    <div class="button">
+        <div class="child-button">
+            <button onclick="location.href='/'">戻る</button>
+            <button type="submit">追加</button>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>フッター</p>
+    </footer>
+</body>
+
+</html>

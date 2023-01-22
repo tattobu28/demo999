@@ -1,0 +1,239 @@
+/********************************************
+ リセット用
+*********************************************/
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+/***************
+  共通
+***************/
+body {
+    color: #2c3e50;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #2c3e50;
+}
+
+header a {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #2c3e50;
+}
+
+footer p {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*****************
+  インプットページ
+*****************/
+.error {
+    width: 980px;
+    padding: 10px 20px;
+    margin: 50px auto 0;
+    text-align: left;
+    border: 1px solid #e3e7e8;
+}
+
+.error-message {
+    color: red;
+}
+
+.form {
+    width: 980px;
+    padding: 30px 20px;
+    margin: 10px auto 20px;
+    border: 1px solid #e3e7e8;
+    border-radius: 3px;
+}
+
+form p {
+    color: red;
+}
+
+.column-title {
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+input:focus {
+    border: 2px solid #222222;
+    border-radius: 3px;
+}
+
+.form input {
+    height: 46px;
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.form button {
+    height: 30px;
+    width: 60px;
+    border: 1px solid #e3e7e8;
+    border-radius: 3px;
+    background-color: #2c3e50;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.form-nameKana {
+    display: flex;
+    justify-content: center;
+}
+
+.form-name {
+    margin-right: auto;
+    width: 90%;
+}
+
+.form-kana {
+    margin-left: auto;
+    width: 90%;
+}
+
+.form-phonePost {
+    display: flex;
+    justify-content: center;
+}
+
+.form-pn {
+    margin-right: auto;
+    width: 90%;
+}
+
+.form-postcode {
+    margin-left: auto;
+    width: 90%;
+}
+
+.button {
+    width: 500px;
+    padding: 30px 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.button button {
+    height: 30px;
+    width: 60px;
+    border: 1px solid #e3e7e8;
+    border-radius: 3px;
+    background-color: #2c3e50;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.child-button {
+    margin: auto;
+}
+
+.form-search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.srResult-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    display: none;
+}
+
+.srResult-table th,
+td {
+    height: 45px;
+    padding: 5px;
+    border: solid 1px #2c3e50;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.srResult-table th {
+    background-color: #2c3e50;
+    color: #FFFFFF;
+}
+
+.srResult-table a {
+    color: #2c3e50;
+}
+
+.table-name {
+    width: 250px;
+}
+
+.table-bd {
+    width: 100px;
+}
+
+.table-add {
+    width: 500px;
+}
+
+.chkBoxImage {
+    width: 25px;
+    height: 25px;
+}
+
+.allChkBox {
+    width: 25px;
+    height: 25px;
+}
+
+/****************
+  インデックス
+****************/
+.toSearch {
+    width: 500px;
+    padding: 30px 20px;
+    margin: 50px auto 20px;
+    border: 1px solid #e3e7e8;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.toSearch button {
+    height: 50px;
+    width: 120px;
+    border: 1px solid #e3e7e8;
+    border-radius: 3px;
+    background-color: #2c3e50;
+    color: #FFFFFF;
+    font-size: 16px;
+}
