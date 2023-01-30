@@ -16,29 +16,35 @@
         <p class="error-message">エラーメッセージ</p>
     </div>
     <div class="form">
-        <form>
+        <form method="get" name="guest_form">
             <div class="form-nameKana">
                 <div class="form-name">
                     <h2 class="column-title">名前</h2>
-                    <p>名前を入力してください</p>   
-                    <input type="text">
+                    <p class="err_msg" id="name_err1">名前を入力してください</p>
+                    <p class="err_msg" id="name_err2">名前は全角で入力してください</p>
+                    <input type="text" id="name_form" onblur="nameCheck()">
                 </div>
                 <div class="form-kana">
                     <h2 class="column-title">名前カナ</h2>
-                    <p>カナを入力してください</p>
-                    <input type="text">
+                    <p class="err_msg" id="kana_err1">カナを入力してください</p>
+                    <p class="err_msg" id="kana_err2">カナは全角カナで入力してください</p>
+                    <input type="text" id="kana_form" onblur="kanaCheck()">
                 </div>
             </div>
             <div class="form-phonePost">
                 <div class="form-pn">
                     <h2 class="column-title">電話番号</h2>
-                    <p>電話番号を入力してください</p>
-                    <input type="text">
+                    <p class="err_msg" id="pn_err1">電話番号を入力してください</p>
+                    <p class="err_msg" id="pn_err2">電話番号は半角数字で入力してください</p>
+                    <p class="err_msg" id="pn_err3">電話番号は10桁もしくは11桁で入力してください</p>
+                    <input type="text" id="pn_form" maxlength="11" onblur="pnCheck()">
                 </div>
                 <div class="form-postcode">
                     <h2 class="column-title">郵便番号</h2>
-                    <p>郵便番号を入力してください</p>
-                    <input type="text">
+                    <p class="err_msg" id="pc_err1">郵便番号を入力してください</p>
+                    <p class="err_msg" id="pc_err2">郵便番号は半角数字で入力してください</p>
+                    <p class="err_msg" id="pc_err3">郵便番号は7桁で入力してください</p>
+                    <input type="text" id="pc_form" maxlength="7" onblur="pcCheck()">
                 </div>
             </div>
 
