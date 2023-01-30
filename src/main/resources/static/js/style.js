@@ -83,3 +83,95 @@ function clickSearchBtn() {
         table1.style.display = "block";
     }
 }
+
+
+function nameCheck() {
+    var str = document.getElementById("name_form").value;
+    const name_err1 = document.getElementById("name_err1");
+    const name_err2 = document.getElementById("name_err2");
+
+    if (str.trim().length == 0) {
+        name_err1.style.display = "block";
+        name_err2.style.display = "none";
+    } else if (str.match(/^[^\x01-\x7E\uFF61-\uFF9F]+$/)) {
+        name_err1.style.display = "none";
+        name_err2.style.display = "none";
+    } else {
+        //全角文字以外
+        name_err1.style.display = "none";
+        name_err2.style.display = "block";
+    }
+}
+
+function kanaCheck() {
+    var str = document.getElementById("kana_form").value;
+    const kana_err1 = document.getElementById("kana_err1");
+    const kana_err2 = document.getElementById("kana_err2");
+
+    if (str.trim().length == 0) {
+        kana_err1.style.display = "block";
+        kana_err2.style.display = "none";
+    } else if (str.match(/^[ァ-ヶー ]*$/)) {
+        kana_err1.style.display = "none";
+        kana_err2.style.display = "none";
+    } else {
+        kana_err1.style.display = "none";
+        kana_err2.style.display = "block";
+    }
+}
+
+function pnCheck() {
+    var str = document.getElementById("pn_form").value;
+    const pn_err1 = document.getElementById("pn_err1");
+    const pn_err2 = document.getElementById("pn_err2");
+    const pn_err3 = document.getElementById("pn_err3");
+
+
+    if (str.trim().length == 0) {
+        pn_err1.style.display = "block";
+        pn_err2.style.display = "none";
+        pn_err3.style.display = "none";
+    } else if (str.match(/^[0-9]+$/)) {
+        if (str.length < 10) {
+            pn_err1.style.display = "none";
+            pn_err2.style.display = "none";
+            pn_err3.style.display = "block";
+        } else {
+            pn_err1.style.display = "none";
+            pn_err2.style.display = "none";
+            pn_err3.style.display = "none";
+        }
+    } else {
+        pn_err1.style.display = "none";
+        pn_err2.style.display = "block";
+        pn_err3.style.display = "none";
+    }
+}
+
+function pcCheck() {
+    var str = document.getElementById("pc_form").value;
+    const pc_err1 = document.getElementById("pc_err1");
+    const pc_err2 = document.getElementById("pc_err2");
+    const pc_err3 = document.getElementById("pc_err3");
+
+
+    if (str.trim().length == 0) {
+        pc_err1.style.display = "block";
+        pc_err2.style.display = "none";
+        pc_err3.style.display = "none";
+    } else if (str.match(/^[0-9]+$/)) {
+        if (str.length < 7) {
+            pc_err1.style.display = "none";
+            pc_err2.style.display = "none";
+            pc_err3.style.display = "block";
+        } else {
+            pc_err1.style.display = "none";
+            pc_err2.style.display = "none";
+            pc_err3.style.display = "none";
+        }
+    } else {
+        pc_err1.style.display = "none";
+        pc_err2.style.display = "block";
+        pc_err3.style.display = "none";
+    }
+}
