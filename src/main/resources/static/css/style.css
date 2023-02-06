@@ -79,16 +79,16 @@ footer p {
     visibility: hidden;
 }
 
-.form {
+form p {
+    color: red;
+}
+
+.form_form {
     width: 980px;
     padding: 30px 20px;
     margin: 10px auto 20px;
     border: 1px solid #e3e7e8;
     border-radius: 3px;
-}
-
-form p {
-    color: red;
 }
 
 .column-title {
@@ -155,7 +155,7 @@ input:focus {
     margin-bottom: 200px;
 }
 
-.button button {
+.button input {
     height: 30px;
     width: 60px;
     border: 1px solid #e3e7e8;
@@ -246,4 +246,85 @@ td {
     background-color: #2c3e50;
     color: #FFFFFF;
     font-size: 16px;
+}
+
+/****************
+  確認画面
+****************/
+
+.sendSet-table {
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+.sendSet-table th,
+td {
+    height: 45px;
+    padding: 5px;
+    border: solid 1px #2c3e50;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sendSet-table th {
+    background-color: #2c3e50;
+    color: #FFFFFF;
+}
+
+.sendSet-table a {
+    color: #2c3e50;
+}
+
+.sendSet-table p.kana {
+    display: flex;
+} 
+
+
+.table-mail {
+    width: 500px;
+}
+
+.sendSelect_form {
+    display: flex;
+    vertical-align: middle;
+}
+
+.form-mail {
+    margin-left: 20px;
+}
+
+.form-mail input {
+    height: 27px;
+    width: 300px;
+}
+
+.form-sms {
+    display: none;
+    height: 27px;
+    width: 300px;
+}
+
+.backSearch {
+    width: 980px;
+    padding: 30px 20px;
+    margin: 50px auto 0;
+    display: flex;
+    position: relative;
+}
+
+.backSearch button {
+    height: 30px;
+    width: 120px;
+    border: 1px solid #e3e7e8;
+    border-radius: 3px;
+    background-color: #2c3e50;
+    color: #FFFFFF;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+}
+
+.err_msg1 {
+    display: none;
+    color: red;
 }
