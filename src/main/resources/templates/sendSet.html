@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" th:src="@{/js/style.js}"></script>
+    <title>sendSet</title>
+</head>
+
+<body>
+    <header>
+        <a th:href="@{/}">ヘッダー</a>
+    </header>
+
+    <div class="backSearch">
+        <button onclick="location.href='/input'">検索画面へ</button>
+    </div>
+    <table class="sendSet-table" id="table1">
+        <tr>
+            <th><img onclick="allChange()" class="allChkBox" id="allChkBox" src="images/square-1.jpg"></th>
+            <th class="table-name">お客様名</th>
+            <th class="table-bd">生年月日</th>
+            <th class="table-mail">送信手段</th>
+            <th>案内フラグ</th>
+        </tr>
+        <tr>
+            <td><img onclick="change1()" class="chkBoxImage" id="chkBox1" src="images/chkBox_off.jpg"></td>
+            <td><p class="kana"><span th:text="${name}">テスト名</span>&nbsp;(<span th:text="${kana}">テストメイ</span>)</p></td>
+            <td><span th:text="${birthday}">2450/3/3</span></td>
+            <td>
+                <div class="sendSelect_form">
+                    <label for="inq1"><input type="radio" id="inq1" name="select_send1" value="1" onclick="clickMail1()"
+                            checked>メール</label>
+                    <label for="inq2"><input type="radio" id="inq2" name="select_send1" value="2"
+                            onclick="clickSms1()">ＳＭＳ</label>
+                    <div class="form-mail">
+                        <p class="err_msg1" id="mail1_err1">メールアドレスを入力してください</p>
+                        <p class="err_msg1" id="mail1_err2">正しいメール形式ではないようです</p>
+                        <input type="text" id="mail_form1" onblur="mailCheck1()" placeholder="メール">
+                    </div>
+                    <div>
+                        <p class="err_msg1" id="sms1_err1">ＳＭＳアカウントを入力してください</p>
+                        <p class="err_msg1" id="sms1_err2">ＳＭＳは半角英数字で入力してください</p>
+                        <input class="form-sms" type="text" id="sms_form1" onblur="smsCheck1()" placeholder="ＳＭＳ">
+                    </div>
+                </div>
+            </td>
+            <td th:align=center><span th:text="${infoFlag}">未</span></td>
+        </tr>
+        <!--<tr>
+            <td><img onclick="change2()" class="chkBoxImage" id="chkBox2" src="images/chkBox_off.jpg"></td>
+            <td>佐藤次郎 (サトウジロウ)</td>
+            <td>0000/00/01</td>
+            <td>
+                <div class="sendSelect_form">
+                    <label for="inq3"><input type="radio" id="inq3" name="select_send2" value="3" onclick="clickMail2()"
+                            checked>メール</label>
+                    <label for="inq4"><input type="radio" id="inq4" name="select_send2" value="4"
+                            onclick="clickSms2()">ＳＭＳ</label>
+                    <div class="form-mail">
+                        <p class="err_msg1" id="mail2_err1">メールアドレスを入力してください</p>
+                        <p class="err_msg1" id="mail2_err2">正しいメール形式ではないようです</p>
+                        <input type="text" id="mail_form2" onblur="mailCheck2()" placeholder="メール">
+                    </div>
+                    <div>
+                        <p class="err_msg1" id="sms2_err1">ＳＭＳアカウントを入力してください</p>
+                        <p class="err_msg1" id="sms2_err2">ＳＭＳは半角英数字で入力してください</p>
+                        <input class="form-sms" type="text" id="sms_form2" onblur="smsCheck2()" placeholder="ＳＭＳ">
+                    </div>
+                </div>
+            </td>
+            <td th:align=center>済</td>
+        </tr>
+        <tr>
+            <td><img onclick="change3()" class="chkBoxImage" id="chkBox3" src="images/chkBox_off.jpg"></td>
+            <td>田中三郎 (タナカサブロウ)</td>
+            <td>0000/00/02</td>
+            <td>
+                <div class="sendSelect_form">
+                    <label for="inq5"><input type="radio" id="inq5" name="select_send3" value="5" onclick="clickMail3()"
+                            checked>メール</label>
+                    <label for="inq6"><input type="radio" id="inq6" name="select_send3" value="6"
+                            onclick="clickSms3()">ＳＭＳ</label>
+                    <div class="form-mail">
+                        <p class="err_msg1" id="mail3_err1">メールアドレスを入力してください</p>
+                        <p class="err_msg1" id="mail3_err2">正しいメール形式ではないようです</p>
+                        <input type="text" id="mail_form3" onblur="mailCheck3()" placeholder="メール">
+                    </div>
+                    <div>
+                        <p class="err_msg1" id="sms3_err1">ＳＭＳアカウントを入力してください</p>
+                        <p class="err_msg1" id="sms3_err2">ＳＭＳは半角英数字で入力してください</p>
+                        <input class="form-sms" type="text" id="sms_form3" onblur="smsCheck3()" placeholder="ＳＭＳ">
+                    </div>
+                </div>
+            </td>
+            <td th:align=center>エラー</td>
+        </tr>-->
+    </table>
+
+    <div class="button">
+        <div class="child-button">
+            <button type="submit">次へ</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>フッター</p>
+    </footer>
+</body>
+
+</html>

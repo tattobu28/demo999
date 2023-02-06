@@ -175,3 +175,219 @@ function pcCheck() {
         pc_err3.style.display = "none";
     }
 }
+
+function clickSms1() {
+    const mail_form = document.getElementById("mail_form1");
+    const sms_form = document.getElementById("sms_form1");
+    const mail_err1 = document.getElementById("mail1_err1");
+    const mail_err2 = document.getElementById("mail1_err2");
+
+    if (sms_form.style.display == "block") {
+        sms_form.style.display = "block";
+        mail_form.style.display = "none";
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "none";
+    } else {
+        sms_form.style.display = "block";
+        mail_form.style.display = "none";
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "none";
+    }
+}
+
+function clickMail1() {
+    const mail_form = document.getElementById("mail_form1");
+    const sms_form = document.getElementById("sms_form1");
+    const sms_err1 = document.getElementById("sms1_err1");
+    const sms_err2 = document.getElementById("sms1_err2");
+
+    if (mail_form.style.display == "block") {
+        sms_form.style.display = "none";
+        mail_form.style.display = "block";
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "none";
+    } else {
+        sms_form.style.display = "none";
+        mail_form.style.display = "block";
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "none";
+    }
+}
+
+function clickSms2() {
+    const mail_form = document.getElementById("mail_form2");
+    const sms_form = document.getElementById("sms_form2");
+    const mail_err1 = document.getElementById("mail2_err1");
+    const mail_err2 = document.getElementById("mail2_err2");
+
+    if (sms_form.style.display == "block") {
+        sms_form.style.display = "block";
+        mail_form.style.display = "none";
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "none";
+    } else {
+        sms_form.style.display = "block";
+        mail_form.style.display = "none";
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "none";
+    }
+}
+
+function clickMail2() {
+    const mail_form = document.getElementById("mail_form2");
+    const sms_form = document.getElementById("sms_form2");
+    const sms_err1 = document.getElementById("sms2_err1");
+    const sms_err2 = document.getElementById("sms2_err2");
+
+    if (mail_form.style.display == "block") {
+        sms_form.style.display = "none";
+        mail_form.style.display = "block";
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "none";
+    } else {
+        sms_form.style.display = "none";
+        mail_form.style.display = "block";
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "none";
+    }
+}
+
+function clickSms3() {
+    const mail_form = document.getElementById("mail_form3");
+    const sms_form = document.getElementById("sms_form3");
+    const mail_err1 = document.getElementById("mail3_err1");
+    const mail_err2 = document.getElementById("mail3_err2");
+
+    if (sms_form.style.display == "block") {
+        sms_form.style.display = "block";
+        mail_form.style.display = "none";
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "none";
+    } else {
+        sms_form.style.display = "block";
+        mail_form.style.display = "none";
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "none";
+    }
+}
+
+function clickMail3() {
+    const mail_form = document.getElementById("mail_form3");
+    const sms_form = document.getElementById("sms_form3");
+    const sms_err1 = document.getElementById("sms3_err1");
+    const sms_err2 = document.getElementById("sms3_err2");
+
+    if (mail_form.style.display == "block") {
+        sms_form.style.display = "none";
+        mail_form.style.display = "block";
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "none";
+    } else {
+        sms_form.style.display = "none";
+        mail_form.style.display = "block";
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "none";
+    }
+}
+
+function mailCheck1() {
+    var str = document.getElementById("mail_form1").value;
+    const mail_err1 = document.getElementById("mail1_err1");
+    const mail_err2 = document.getElementById("mail1_err2");
+
+    if (str.trim().length == 0) {
+        mail_err1.style.display = "block";
+        mail_err2.style.display = "none";
+    } else if (str.match(/^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/)) {
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "none";
+    } else {
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "block";
+    }
+}
+
+function smsCheck1() {
+    var str = document.getElementById("sms_form1").value;
+    const sms_err1 = document.getElementById("sms1_err1");
+    const sms_err2 = document.getElementById("sms1_err2");
+
+    if (str.trim().length == 0) {
+        sms_err1.style.display = "block";
+        sms_err2.style.display = "none";
+    } else if (str.match(/^[0-9a-zA-Z]*$/)) {
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "none";
+    } else {
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "block";
+    }
+}
+
+function mailCheck2() {
+    var str = document.getElementById("mail_form2").value;
+    const mail_err1 = document.getElementById("mail2_err1");
+    const mail_err2 = document.getElementById("mail2_err2");
+
+    if (str.trim().length == 0) {
+        mail_err1.style.display = "block";
+        mail_err2.style.display = "none";
+    } else if (str.match(/^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/)) {
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "none";
+    } else {
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "block";
+    }
+}
+
+function smsCheck2() {
+    var str = document.getElementById("sms_form2").value;
+    const sms_err1 = document.getElementById("sms2_err1");
+    const sms_err2 = document.getElementById("sms2_err2");
+
+    if (str.trim().length == 0) {
+        sms_err1.style.display = "block";
+        sms_err2.style.display = "none";
+    } else if (str.match(/^[0-9a-zA-Z]*$/)) {
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "none";
+    } else {
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "block";
+    }
+}
+
+function mailCheck3() {
+    var str = document.getElementById("mail_form3").value;
+    const mail_err1 = document.getElementById("mail3_err1");
+    const mail_err2 = document.getElementById("mail3_err2");
+
+    if (str.trim().length == 0) {
+        mail_err1.style.display = "block";
+        mail_err2.style.display = "none";
+    } else if (str.match(/^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/)) {
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "none";
+    } else {
+        mail_err1.style.display = "none";
+        mail_err2.style.display = "block";
+    }
+}
+
+function smsCheck3() {
+    var str = document.getElementById("sms_form3").value;
+    const sms_err1 = document.getElementById("sms3_err1");
+    const sms_err2 = document.getElementById("sms3_err2");
+
+    if (str.trim().length == 0) {
+        sms_err1.style.display = "block";
+        sms_err2.style.display = "none";
+    } else if (str.match(/^[0-9a-zA-Z]*$/)) {
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "none";
+    } else {
+        sms_err1.style.display = "none";
+        sms_err2.style.display = "block";
+    }
+}
